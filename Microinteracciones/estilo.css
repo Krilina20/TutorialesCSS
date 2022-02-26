@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Quicksand:wght@300;400;500;600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+section
+{
+    position: relative;
+    background: #161623;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box
+{
+    padding: 0px;
+}
+
+.box .list
+{
+    position: relative;
+    display: flex;
+    min-width: 360px;
+    /* padding: 10px 0; */
+    background: rgba(255,255,255,.9);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.box .list .imageBox
+{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.box .list .imageBox img
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box .list .content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:#333;
+}
+
+.box .list .content h4
+{
+    line-height: 1.2em;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.box .list .content p
+{
+    font-size: 0.75em;
+    transition: 0.5s;
+}
+
+.grupo
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.grupo .acciones
+{
+    position: relative;
+    left: 10px;
+    /* width: 40px; */
+    /* padding: 40px; */
+    margin-top: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.9);
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.grupo .acciones:hover
+{
+    position: relative;
+    /* padding: 40px;
+    width: 200px; */
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.grupo .acciones .boton
+{
+    position: relative;
+    width: 6px;
+    height: 6px;
+    background-color: #333;
+    border-radius: 50%;
+    /* margin-bottom: 20px; */
+    margin-top: 6px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grupo .acciones .boton i
+{
+    display: none;
+    color: #fff;
+    font-size: 0em;
+}
+
+/* .grupo .acciones:hover .boton */
+.grupo .acciones:hover .boton
+{
+    position: relative;
+    /* width: 200px; */
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border: 2px solid #333;
+    transition: 0.5s;
+}
+
+.grupo .acciones:hover .boton i
+{
+    position: relative;
+    display: contents;
+    z-index: 100;
+    font-size: 1.5em;
+}
+
+.grupo .acciones:hover .boton:hover
+{
+    background-color: green;
+}
+

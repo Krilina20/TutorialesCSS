@@ -1,0 +1,140 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e8ffe8;
+    transform-origin: bottom;
+    overflow: hidden;
+}
+
+.tree
+{
+    position: relative;
+    top: -150px;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 16s linear infinite;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotateX(-20deg) rotateY(360deg);
+    }
+    100%
+    {
+        transform: rotateX(-20deg) rotateY(0deg);
+    }
+}
+
+.tree::before
+{
+    content: '\2605';
+    position: absolute;
+    top: -90px;
+    left: calc(50% - 30px);
+    font-size: 4em;
+    color: #FFCC00;
+    -webkit-text-stroke: 2px #000;
+
+    /* outline-color: 2px black; */
+    /* border: 2px #000; */
+}
+
+.tree div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateY(calc(100px * var(--j)));
+}
+
+.tree div.top span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #69c069, #77dd77);
+    transform: rotateY(calc(90deg * var(--i))) rotateX(30deg) translateZ(86px);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-bottom: 10px solid #00000019;
+}
+
+.tree div.bottom span
+{
+    position: absolute;
+    top: 180%;
+    left: 45%;
+    width: 20%;
+    height: 35%;
+    background: linear-gradient(90deg, #FF9900, #AA3300);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(30px);
+    /* clip-path: polygon(50% 0%, 0% 100%, 100% 100%); */
+    border-bottom: 10px solid #00000019;
+}
+
+.shadow
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: #0000000F;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateZ(-500px);
+    filter: blur();
+}
+
+.tree div.text span
+{
+    position: absolute;
+    top: 610px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom;
+    transform: rotateY(calc(90deg * var(--i))) translateZ(160px);
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end; */
+    color: #ff4242;
+    text-transform: uppercase;
+    line-height: 0em;
+    font-size: 5.5em;
+    font-weight: 700;
+    /* clip-path: polygon(50% 0%,  0% 100%, 100% 100%); */
+    -webkit-text-stroke: 1px #fff;
+    transform-style: preserve-3d;
+}
+
+/* .tree div.text span:nth-child(1)
+{
+    font-size: 4em;
+} */
+
+.tree div.text span::before
+{
+    content: attr(data-text);
+    position: absolute;
+    /* bottom: 270px; */
+    transform-origin: bottom;
+    transform: rotateX(-90deg) translateZ(30px) translateY(-27px);
+    color: #0000000f;
+    filter: blur();
+}

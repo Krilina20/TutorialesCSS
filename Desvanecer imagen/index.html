@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Desvanecer imagen</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <div class="container">
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            let contenedor = document.querySelector(".container")
+            for(var i=0; i<400; i++)
+            {
+                let bloque = document.createElement("div")
+                bloque.classList.add("block")
+                contenedor.appendChild(bloque)
+
+            }
+            let bloque = document.querySelectorAll(".block")
+            let animacion = anime.timeline({
+                targets: bloque,
+                easing: "easeInOutExpo",
+                loop: true,
+                delay: anime.stagger(10, {start:50})
+            })
+            animacion
+            .add({
+                scale: 0,
+                translateX: function(){return anime.random(360, 2100)},
+                translateY: function(){return anime.random(360, -2100)},
+                rotate: function(){return anime.random(-360, 360)},
+                duration: function(){return anime.random(200, 1000)},
+              })
+              .add({
+                scale: 1,
+                translateX: 0,
+                translateY: 0,
+                rotate: 0,
+                duration: function(){return anime.random(560, 3000)},
+              })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,126 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+:root
+{
+    --clr: #5ff436;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vw;
+    background: #222;
+}
+
+.trueno
+{
+    display: flex;
+    gap: 80px;
+    /* transform: translate(50%, 50%); */
+}
+
+.trueno .forma1
+{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 70px solid var(--clr);
+    border-left: 35px solid transparent;
+    transform: skewX(-25deg) translateY(-50px);
+}
+
+.trueno .forma1::before
+{
+    content: "";
+    position: absolute;
+    bottom: -130px;
+    right: -17.5px;
+    border-top: 70px solid var(--clr);
+    border-right: 35px solid transparent;
+}
+
+.trueno .forma2
+{
+    position: relative;
+    width: 25px;
+    height: 50px;
+    background: var(--clr);
+    transform: skewX(-25deg) translateY(-15px);
+}
+
+.trueno .forma2::before
+{
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+    border-bottom: 70px solid var(--clr);
+    border-left: 35px solid transparent;
+}
+
+.trueno .forma2::after
+{
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -30px;
+    border-top: 70px solid var(--clr);
+    border-right: 35px solid transparent;
+}
+
+.trueno .forma3
+{
+    position: relative;
+    width: 25px;
+    height: 50px;
+    background: var(--clr);
+    transform: skewX(-25deg) translateY(0px);
+}
+
+.trueno .forma3::before
+{
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+    border-bottom: 70px solid var(--clr);
+    border-left: 35px solid var(--clr);
+}
+
+.trueno .forma3::after
+{
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -30px;
+    border-top: 70px solid var(--clr);
+    border-right: 35px solid transparent;
+}
+
+.trueno .forma4
+{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-bottom: 70px solid var(--clr);
+    border-left: 35px solid var(--clr);
+    transform: skewX(-25deg) translate(-20px, -50px);;
+}
+
+.trueno .forma4::before
+{
+    content: "";
+    position: absolute;
+    bottom: -130px;
+    right: -17.5px;
+    border-top: 70px solid var(--clr);
+    border-right: 35px solid transparent;
+}

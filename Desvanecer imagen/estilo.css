@@ -1,0 +1,38 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body
+{
+    min-height: 100vw;
+    background: #FFF;
+    overflow: hidden;
+}
+
+.container
+{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.container .block
+{
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    /* background: #f00; */
+    background: url("imagen/Rezando.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: center;
+    /* border: 1px solid #111;
+    box-sizing: border-box; */
+    transform-style: preserve-3d;
+}
