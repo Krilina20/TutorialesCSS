@@ -1,0 +1,82 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vw;
+    background: #333;
+}
+
+label
+{
+    position: relative;
+    top: -150px;
+    width: 150px;
+    height: 75px;
+    background-color: #212121;
+    border-radius: 10px;
+}
+
+label input
+{
+    appearance: none;
+}
+
+label span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 75px;
+    background: #333;
+    border: 6px solid #212121;
+    border-radius: 14px;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label span i
+{
+    font-size: 30px;
+    color: rgba(255, 255, 255, .25);
+    transition: 0s;
+}
+
+label input:checked ~ span 
+{
+    left: 75px;
+}
+
+label input:checked ~ span i
+{
+    color: white;
+    /* box-shadow: 0 0 20px rgba(255, 255, 255, .75); */
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 7px #fff) drop-shadow(0 0 2px #fff);
+    transition: .25s;
+}
+
+.bombilla
+{
+    position: absolute;
+    top: 100%;
+    left: -60%;
+    width: 200%;
+    height: 500%;
+    background: url("imagenes/bulb_off.jpg");
+    pointer-events: none;
+}
+
+label input:checked ~  .bombilla
+{
+    background: url("imagenes/bulb_on.jpg");
+}
