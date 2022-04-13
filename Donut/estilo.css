@@ -1,0 +1,31 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vw;
+    background: #222;
+    color: #fff;
+}
+
+.animacion
+{
+    background: #fff;
+    color:darkgray;
+    padding: 4px;
+}
+
+.animacion
+{
+    background: #fff;
+    color:darkgray;
+    padding: 4px;
+}
